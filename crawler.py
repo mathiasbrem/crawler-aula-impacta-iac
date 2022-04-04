@@ -1,0 +1,1 @@
+print('Fluxo de automação para captura de dados de preço da pagina dos concorrentes')
