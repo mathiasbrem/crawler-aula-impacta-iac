@@ -48,3 +48,4 @@ resource "huaweicloud_compute_instance" "basic" {
   }
 }
 
+
