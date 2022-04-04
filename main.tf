@@ -35,15 +35,9 @@ resource "huaweicloud_networking_secgroup" "secgroup_impacta_iac" {
   description = "impacta_iac security group acceptance"
 }
 
-resource "random_password" "password" {
-  length           = 16
-  special          = true
-  override_special = "!@#$%*"
-}
-
 resource "huaweicloud_compute_instance" "basic" {
   name              = "basic"
-  admin_pass        = random_password.password.result
+  admin_pass        = "admin123"
   image_id          = data.huaweicloud_images_image.myimage.id
   flavor_id         = data.huaweicloud_compute_flavors.myflavor.ids[0]
   availability_zone = data.huaweicloud_availability_zones.myaz.names[0]
